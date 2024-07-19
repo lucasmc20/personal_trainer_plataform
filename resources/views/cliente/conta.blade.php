@@ -7,7 +7,7 @@
             <div class="card border-danger mb-3 ">
                 <form action="{{route('update_conta')}}" method="POST">
                     @csrf
-                    <div class="card-header" style="background-color: #BF3434"><h3>Detalhes</h3></div>
+                    <div class="card-header" style="background-color: #ff6c00"><h3>Detalhes</h3></div>
                     <div class="card-body text-dark bg-light" >
                         <p class="card-text"><b>Nome: </b> <input type="text" value="{{$cliente->name}}" name="nome"></p>
                         <p class="card-text"><b>E-mail: </b> {{$cliente->email}}</p>
@@ -17,7 +17,7 @@
                         <p class="card-text"><b>Profissão: </b> <input type="text" value="{{$cliente->profissao}}" name="profissao"></p>
                     </div>
                     <div class="card-footer">
-                        <button class="btn" style="background-color: #BF3434; color:white">Guardar Alterações</button>
+                        <button class="btn" style="background-color: #ff6c00; color:white">Guardar Alterações</button>
                     </div>
                 </form>
             </div>
@@ -26,7 +26,7 @@
             <div class="card border-danger mb-3">
                 <form action="{{ route('alterarPassword') }}" method="POST">
                     @csrf
-                    <div class="card-header" style="background-color: #BF3434"><h3>Alterar Password</h3></div>
+                    <div class="card-header" style="background-color: #ff6c00"><h3>Alterar Password</h3></div>
                     <div class="card-body text-dark bg-light">
                         @error('passwordAlterada')
                         <div class="alert alert-success">{{ $message }}</div>
@@ -48,7 +48,7 @@
                         </div> <!-- form-group// -->
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn" style="background-color: #BF3434; color:white">Alterar password</button>
+                        <button type="submit" class="btn" style="background-color: #ff6c00; color:white">Alterar password</button>
                     </div>
                 </form>
             </div>
