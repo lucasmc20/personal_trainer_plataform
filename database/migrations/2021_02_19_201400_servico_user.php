@@ -30,12 +30,12 @@ class ServicoUser extends Migration
 
 
         $user = new User();
-        $user->name = 'Daniela Narciso';
-        $user->email = 'admin@admin.com';
+        $user->name = 'Lucas';
+        $user->email = 'bmb.lucas@gmail.com';
         $user->email_verified_at = now();
         $user->admin = 1;
         $user->tipo_servico_id = 1;
-        $user->password = Hash::make('admin123');
+        $user->password = Hash::make('senha.123');
         $user->remember_token = Str::random(10);
         $user->save();
 
