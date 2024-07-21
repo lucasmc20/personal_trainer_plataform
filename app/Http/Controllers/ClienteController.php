@@ -85,9 +85,9 @@ class ClienteController extends Controller
                     request(self::SERVICO),
                     request(self::TELEMOVEL)
                 );
-                return redirect('dnpt/admin/clientes')->withErrors(['clienteCriado' => 'Cliente criado com sucesso!']);
+                return redirect('admin/clientes')->withErrors(['clienteCriado' => 'Cliente criado com sucesso!']);
             } catch (ValidationException $e) {
-                return redirect('dnpt/admin/clientes/create')
+                return redirect('admin/clientes/create')
                     ->withInput()
                     ->withErrors($validator);
             }
@@ -171,9 +171,9 @@ class ClienteController extends Controller
                     request(self::TELEMOVEL),
                     request(self::PAGAMENTO)
                 );
-                return redirect('dnpt/admin/clientes')->withErrors(['clienteCriado' => 'Alteração feita com sucesso!']);
+                return redirect('admin/clientes')->withErrors(['clienteCriado' => 'Alteração feita com sucesso!']);
             } catch (ValidationException $e) {
-                return redirect('dnpt/admin/clientes/create')
+                return redirect('admin/clientes/create')
                     ->withInput()
                     ->withErrors($validator);
             }
@@ -193,7 +193,7 @@ class ClienteController extends Controller
     {
         if(Auth::user()->admin == 1) {
             $userHandler->apagarCliente($id);
-            return redirect("dnpt/admin/clientes")->withErrors(['clienteEliminado' => 'Cliente eliminado com sucesso!']);
+            return redirect("admin/clientes")->withErrors(['clienteEliminado' => 'Cliente eliminado com sucesso!']);
         }else {
             abort(404, 'Page not found');
         }
@@ -220,9 +220,9 @@ class ClienteController extends Controller
                     request(self::PASSWORD)
                 );
 
-                return redirect("dnpt/admin/clientes/{$id}")->withErrors(['passwordAlterada' => 'Password alterada com sucesso!']);
+                return redirect("admin/clientes/{$id}")->withErrors(['passwordAlterada' => 'Password alterada com sucesso!']);
             } catch (ValidationException $e) {
-                return redirect("dnpt/admin/clientes/{$id}")
+                return redirect("admin/clientes/{$id}")
                     ->withInput()
                     ->withErrors($validator);
             }

@@ -98,9 +98,9 @@ class ProgressoCliente extends Controller
                     request(self::PEITO_PERIMETRO),
                     $idCliente
                 );
-                return redirect("dnpt/admin/cliente/{$idCliente}/progresso");
+                return redirect("admin/cliente/{$idCliente}/progresso");
             } catch (ValidationException $e) {
-                return redirect("dnpt/admin/cliente/{$idCliente}/progresso/create")
+                return redirect("admin/cliente/{$idCliente}/progresso/create")
                     ->withErrors($validator)
                     ->withInput();
             }
@@ -177,9 +177,9 @@ class ProgressoCliente extends Controller
                     request(self::PEITO_PERIMETRO),
                     $idCondicao
                 );
-                return redirect("dnpt/admin/cliente/{$idCliente}/progresso/");
+                return redirect("admin/cliente/{$idCliente}/progresso/");
             } catch (ValidationException $e) {
-                return  redirect("dnpt/admin/cliente/{$idCliente}/progresso/{$idCondicao}/edit")
+                return  redirect("admin/cliente/{$idCliente}/progresso/{$idCondicao}/edit")
                     ->withErrors($validator)
                     ->withInput();
             }

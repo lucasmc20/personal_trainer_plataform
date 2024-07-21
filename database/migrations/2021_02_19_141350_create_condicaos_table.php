@@ -15,7 +15,7 @@ class CreateCondicaosTable extends Migration
     {
         Schema::create('condicaos', function (Blueprint $table) {
             $table->id();
-            $table->decimal("peso", 2, 2);
+            $table->string("peso");
             $table->integer("cintura")->nullable();
             $table->integer("coxa")->nullable();
             $table->integer("quadril")->nullable();

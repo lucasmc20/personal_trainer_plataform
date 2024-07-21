@@ -119,7 +119,7 @@ class DiaController extends Controller
             $plano = request("plano");
 
             $planoTreinoHandler->updateDiaPlano($exerciciosDia);
-            return redirect("dnpt/admin/clientes/{$cliente}/plano_treino/{$plano}")
+            return redirect("admin/clientes/{$cliente}/plano_treino/{$plano}")
                 ->withErrors(["AlteracaoSucesso", "Alteração feita com sucesso!"]);
         } else
             abort(404, 'Page not found');

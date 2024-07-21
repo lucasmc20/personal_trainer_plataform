@@ -33,7 +33,7 @@ Route::resource('feedback', \App\Http\Controllers\FeedbackController::class)->mi
 Route::resource('avaliacao_inicial', \App\Http\Controllers\AvaliacaoInicialController::class)->middleware("auth");
 
 
-Route::group(['prefix' => 'dnpt/admin', 'middleware' => 'auth'], function() {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('dashboard', function () {return view('admin.dashboard');})->name('dashboard');
     Route::post('clientes/{id}/password_alteracao', [App\Http\Controllers\ClienteController::class, 'alteracaoPassword'])->name("clientes.alterarPassword");
     Route::get('exercicios/dashboard', [\App\Http\Controllers\ExercicioController::class, 'dashboardExercicios'])->name('exercicios.dashboard');

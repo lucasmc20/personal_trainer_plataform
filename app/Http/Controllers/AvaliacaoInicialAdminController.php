@@ -222,9 +222,9 @@ class AvaliacaoInicialAdminController extends Controller
                     request(self::PEITO_PERIMETRO),
                     request("cliente")
                 );
-                return redirect("dnpt/admin/cliente_avaliacao_inicial")->withErrors(["avaliacaoConcluida" => "Avaliação feita com sucesso"]);
+                return redirect("admin/cliente_avaliacao_inicial")->withErrors(["avaliacaoConcluida" => "Avaliação feita com sucesso"]);
             } catch (ValidationException $e) {
-                return redirect("dnpt/admin/cliente_avaliacao_inicial/create")
+                return redirect("admin/cliente_avaliacao_inicial/create")
                     ->withErrors($validator)
                     ->withInput();
 

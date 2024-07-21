@@ -20,7 +20,15 @@
             <tr>
                 <th scope="row">{{ $avaliacao->id }}</th>
                 <td>
-                     {{ \App\Models\User::where('avaliacao_inicial_id', $avaliacao->id)->first()->name}}
+                    @php
+                        $user = \App\Models\User::where('avaliacao_inicial_id', $avaliacao->id)->first();
+                    @endphp
+
+                    @if ($user)
+                        {{ $user->name }}
+                    @else
+                        Usuário não encontrado
+                    @endif
                 </td>
                 <td>{{ $avaliacao->created_at->format('d/m/Y') }}</td>
                 <td>

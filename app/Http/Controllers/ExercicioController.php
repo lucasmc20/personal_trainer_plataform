@@ -97,10 +97,10 @@ class ExercicioController extends Controller
                     $pathFotoVideo
                 );
 
-                return redirect("dnpt/admin/exercicios/dashboard")
+                return redirect("admin/exercicios/dashboard")
                     ->withErrors(["exercicioCriado" => "Exercício criado com sucesso!"]);
             } catch (ValidationException $e) {
-                return redirect("dnpt/admin/exercicios/create")
+                return redirect("admin/exercicios/create")
                     ->withInput()
                     ->withErrors($validator);
             }
@@ -185,10 +185,10 @@ class ExercicioController extends Controller
                     $pathFotoVideo
                 );
 
-                return redirect("dnpt/admin/exercicios/{$id}")
+                return redirect("admin/exercicios/{$id}")
                     ->withErrors(["exercicioCriado" => "Exercício criado com sucesso!"]);
             } catch (ValidationException $e) {
-                return redirect("dnpt/admin/exercicios/{$id}/edit")
+                return redirect("admin/exercicios/{$id}/edit")
                     ->withInput()
                     ->withErrors($validator);
             }
@@ -206,7 +206,7 @@ class ExercicioController extends Controller
     public function destroy($id, ExercicioHandler $exercicioHandler)
     {
         $exercicioHandler->deleteExercicio($id);
-        return redirect("/dnpt/admin/exercicios/dashboard");
+        return redirect("/admin/exercicios/dashboard");
 
     }
 }

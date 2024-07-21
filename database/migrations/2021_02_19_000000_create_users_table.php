@@ -23,8 +23,8 @@ class CreateUsersTable extends Migration
             $table->date("data_nascimento")->nullable();
             $table->string("profissao")->nullable();
             $table->boolean('pagamento')->default(0);
-            $table->integer('telemovel')->nullable();
-            $table->decimal("altura", 2, 2)->nullable();
+            $table->string('telemovel')->nullable();
+            $table->string("altura")->nullable();
             $table->rememberToken();
             $table->foreignId("avaliacao_inicial_id")->nullable()->constrained("avaliacao_inicials");
             $table->foreignId('tipo_servico_id')->constrained('tipo_servicos');

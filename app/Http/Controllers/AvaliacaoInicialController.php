@@ -83,7 +83,7 @@ class AvaliacaoInicialController extends Controller
                 [
                     self::DATA_NASC => 'required',
                     self::PROFISSAO => 'required|string',
-                    self::TELEMOVEL => 'nullable|integer|min:9|max:9',
+                    self::TELEMOVEL => 'required|string',
                     self::ALTURA => 'required|string',
                     self::PESO => 'required|integer',
                     self::CINTURA_PERIMETRO => 'nullable|integer',

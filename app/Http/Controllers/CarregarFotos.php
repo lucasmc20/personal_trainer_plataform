@@ -108,9 +108,9 @@ class CarregarFotos extends Controller
 
                 $avaliacaoHandler->criarFotosProgresso($pathFotoFrente, $pathFotoLado, $pathFotoCostas, $idCliente, request(self::TITULO));
 
-                return redirect("dnpt/admin/cliente/{$idCliente}/fotos");
+                return redirect("admin/cliente/{$idCliente}/fotos");
             } catch (ValidationException $e) {
-                return redirect("dnpt/admin/cliente/{$idCliente}/fotos/create")
+                return redirect("admin/cliente/{$idCliente}/fotos/create")
                     ->withErrors($validator)
                     ->withInput();
             }
@@ -194,9 +194,9 @@ class CarregarFotos extends Controller
 
                 $userHandler->atualizarFotosProgresso($pathFotoFrente, $pathFotoLado, $pathFotoCostas, request(self::TITULO), $idFoto);
 
-                return redirect("dnpt/admin/cliente/{$idCliente}/fotos");
+                return redirect("admin/cliente/{$idCliente}/fotos");
             } catch (ValidationException $e) {
-                return redirect("dnpt/admin/cliente/{$idCliente}/fotos/{$idFoto}/edit")
+                return redirect("admin/cliente/{$idCliente}/fotos/{$idFoto}/edit")
                     ->withErrors($validator)
                     ->withInput();
             }

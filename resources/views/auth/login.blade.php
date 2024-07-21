@@ -41,18 +41,18 @@
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control input_user" name="email" placeholder="email">
+                            <input type="text" class="form-control input_user" name="email" placeholder="E-mail">
                         </div>
                         <div class="input-group mb-2">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" name="password" class="form-control input_pass" value="" placeholder="password">
+                            <input type="password" name="password" class="form-control input_pass" value="" placeholder="Senha">
                         </div>
                         <div class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="remember_me" name="remember">
-                                <label class="custom-control-label" for="remember_me">{{ __('Remember me') }}</label>
+                                <label class="custom-control-label" for="remember_me">{{ __('Lembrar-me') }}</label>
                             </div>
                         </div>
                         <div class="flex items-center justify-end mt-4">
@@ -62,7 +62,7 @@
                                 </div>
                             @if (Route::has('password.request'))
                                 <div class="d-flex justify-content-center links">
-                                    <a href="{{ route('password.request') }}">{{ __('Forgot your password?') }}</a>
+                                    <a href="{{ route('password.request') }}">{{ __('Esqueceu a sua senha?') }}</a>
                                 </div>
                             @endif
                         </div>

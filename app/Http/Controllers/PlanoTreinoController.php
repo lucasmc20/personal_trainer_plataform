@@ -153,7 +153,7 @@ class PlanoTreinoController extends Controller
             }
             $idCliente = request(self::ID_CLIENTE);
             $idPlano = request(self::ID_PLANO);
-            return redirect("dnpt/admin/clientes/{$idCliente}/plano_treino/{$idPlano}");
+            return redirect("admin/clientes/{$idCliente}/plano_treino/{$idPlano}");
         } else {
             abort(404, 'Page not found');
         }
@@ -256,9 +256,9 @@ class PlanoTreinoController extends Controller
                 printf($id);
                 (new PlanoTreinoHandler)->criarPlano($id, request(self::OBJETIVO));
 
-                return redirect("dnpt/admin/clientes/{$id}/plano_treino/create");
+                return redirect("admin/clientes/{$id}/plano_treino/create");
             } catch (ValidationException $e) {
-                return redirect("dnpt/admin/planos_treino/criar")->withErrors($validator);
+                return redirect("admin/planos_treino/criar")->withErrors($validator);
             }
         } else {
             abort(404, 'Page not found');
