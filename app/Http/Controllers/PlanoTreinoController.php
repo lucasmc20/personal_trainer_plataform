@@ -23,6 +23,8 @@ class PlanoTreinoController extends Controller
     const ID_PLANO = "plano";
     const OBJETIVO = "objetivo";
 
+    const YOUTUBE_LINK = "youtube_link";
+
     /**
      * Display a listing of the resource.
      *
@@ -248,13 +250,13 @@ class PlanoTreinoController extends Controller
                 [
                     self::OBJETIVO => 'required',
                     self::ID_CLIENTE => 'required',
-
+                    self::YOUTUBE_LINK => 'required',
                 ]
             );
             try {
                 $id = request(self::ID_CLIENTE);
                 printf($id);
-                (new PlanoTreinoHandler)->criarPlano($id, request(self::OBJETIVO));
+                (new PlanoTreinoHandler)->criarPlano($id, request(self::OBJETIVO), request(self::YOUTUBE_LINK));
 
                 return redirect("admin/clientes/{$id}/plano_treino/create");
             } catch (ValidationException $e) {

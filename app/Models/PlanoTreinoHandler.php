@@ -16,10 +16,10 @@ class PlanoTreinoHandler
         return PlanoTreino::where("user_id", $idCliente)->latest()->first();
     }
 
-    public function criarPlano(int $clienteId, string $objetivo)
+    public function criarPlano(int $clienteId, string $objetivo, string $youtube_link)
     {
         $cliente = User::find($clienteId);
-        PlanoTreino::createPlano($cliente, $objetivo);
+        PlanoTreino::createPlano($cliente, $objetivo, $youtube_link);
         $tarefa = Tarefa::where('user_id', $cliente->id)->first();
         $tarefa->tarefaMade("plano_treino");
     }

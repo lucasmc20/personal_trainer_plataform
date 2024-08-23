@@ -17,6 +17,7 @@ class CreatePlanoTreinosTable extends Migration
             $table->id();
             $table->string("objetivo");
             $table->foreignId("user_id")->constrained("users");
+            $table->string('youtube_link')->nullable(); 
             $table->timestamps();
         });
     }

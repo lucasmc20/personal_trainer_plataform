@@ -19,10 +19,11 @@ class PlanoTreino extends Model
         return $this->hasMany(Dia::class);
     }
 
-    public static function createPlano(User $cliente, string $objetivo)
+    public static function createPlano(User $cliente, string $objetivo, string $youtube_link)
     {
         $plano = new PlanoTreino();
         $plano->objetivo = $objetivo;
+        $plano->youtube_link = $youtube_link;
         $plano->user()->associate($cliente);
         $plano->save();
     }
