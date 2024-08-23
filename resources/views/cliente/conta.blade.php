@@ -12,7 +12,7 @@
                         <p class="card-text"><b>Nome: </b> <input type="text" value="{{$cliente->name}}" name="nome"></p>
                         <p class="card-text"><b>E-mail: </b> {{$cliente->email}}</p>
                         <p class="card-text"><b>Tipo de Serviço: </b> {{\App\Models\TipoServico::find($cliente->tipo_servico_id)->servico}}</p>
-                        <p class="card-text"><b>Telemovel: </b> <input type="text" value="{{$cliente->telemovel}}" name="telemovel"></p>
+                        <p class="card-text"><b>Celular: </b> <input type="text" value="{{$cliente->telemovel}}" name="telemovel"></p>
                         <p class="card-text"><b>Data Nascimento: </b> <input type="date" value="{{$cliente->data_nascimento}}" name="data_nascimento"></p>
                         <p class="card-text"><b>Profissão: </b> <input type="text" value="{{$cliente->profissao}}" name="profissao"></p>
                     </div>

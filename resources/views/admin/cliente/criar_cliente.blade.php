@@ -37,7 +37,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                     </div>
-                    <input name="telemovel" id="telemovel" class="form-control @error('telemovel') is-invalid @enderror" placeholder="Número Telemóvel" type="text" value="{{ old('telemovel') }}">
+                    <input name="telemovel" id="telemovel" class="form-control @error('telemovel') is-invalid @enderror" placeholder="Número celular" type="text" value="{{ old('telemovel') }}">
                 </div> <!-- form-group// -->
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
